@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700&display=swap');
+
+.main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* background-color: antiquewhite; */
+    height: 90vh;
+    width: 100%;
+    
+}
+.container{
+    width: 85%;
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    /* background-color: aqua; */
+}
+.content_text{
+    width: min-content;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
+    /* background-color: antiquewhite; */
+}
+.content_text h1,
+.content_text h2{
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-family:var(--font1) ;
+    color: var(--color1);
+}
+
+.content_text h1{
+    font-size: 5rem;
+    white-space: nowrap;
+}
+.content_text h2{
+    font-size: 6.1rem;
+    white-space: nowrap;
+    
+}
+.content_text p{
+    font-family: var(--font1);
+    color: var(--color1);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.content_img{
+    width: 500px;
+    /* background-color: antiquewhite; */
+}
+.content_img img{
+    width: 100%;
+}

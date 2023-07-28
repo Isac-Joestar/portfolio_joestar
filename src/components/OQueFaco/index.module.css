@@ -1,0 +1,28 @@
+.container{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: antiquewhite; */
+}
+
+.text{
+    width: 50%;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 124.523%; /* 24.905px */
+    letter-spacing: 0.3px;
+}
+.content_itens{
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: space-between;
+    width: 90%;
+}
+.imagem{
+    width: 600px;
+}
