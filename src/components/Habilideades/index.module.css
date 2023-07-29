@@ -40,6 +40,9 @@
     width: 70%;
 }
 
+.content_habilidades li.selected{
+    background-color: red;
+}
 
 .content{
     width: 100%;
