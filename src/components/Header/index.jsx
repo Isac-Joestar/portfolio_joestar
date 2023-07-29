@@ -3,13 +3,13 @@ export default function Header(){
     return(
         <header className={styles.header}>
             <div className={styles.content_logo}>
-                <p>Isac Joestar</p>
+                <p><a href="/#">Isac Joestar</a></p>
             </div>
             <ul className={styles.nav}>
-                <li>O que faço</li>
-                <li>Habilidades</li>
-                <li>Quem sou</li>
-                <li>Contato</li>
+                <li><a href="/#oqfaco">O que faço</a></li>
+                <li><a href="/#habilidades">Habilidades</a></li>
+                <li><a href="/#quemsou">Quem sou</a></li>
+                <li><a href="/#contato">Contato</a></li>
             </ul>
         </header>
     )

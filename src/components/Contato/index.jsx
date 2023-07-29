@@ -3,7 +3,7 @@ import TopicosTitle from '../TopicosTitle/index'
 import Email from '../Email/index'
 export default function Contato(){
     return(
-        <section className={styles.section}>
+        <section className={styles.section} id='contato'>
             <TopicosTitle title="Contato"/>
             <div className={styles.container}>
                 <div className={styles.content_text}>

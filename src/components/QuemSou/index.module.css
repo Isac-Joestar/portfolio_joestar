@@ -67,3 +67,11 @@
 .list li:hover{
     background-color: rgba(113, 113, 113, 0.50);
 }
+.list li a{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

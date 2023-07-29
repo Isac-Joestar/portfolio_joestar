@@ -1,4 +1,4 @@
-const BASE_URL = (process.env.VERCEL) ? "https://isac.dev" : "http://localhost:3002";
+const BASE_URL = (process.env.VERCEL) ? "https://portfolio-joestar.vercel.app" : "http://localhost:3000";
 
 export{
     BASE_URL

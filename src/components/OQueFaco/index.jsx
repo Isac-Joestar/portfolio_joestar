@@ -2,7 +2,7 @@ import styles from './index.module.css'
 import TopicosTitle from '../TopicosTitle/index'
 export default function OQueFaco(){
     return(
-        <section className={styles.container}>
+        <section className={styles.container} id='oqfaco'>
             <TopicosTitle title="O que faço"/>
 
             <div className={styles.content_itens}>
