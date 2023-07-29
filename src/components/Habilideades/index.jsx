@@ -88,7 +88,7 @@ export default function Habilidades() {
                 <ul className={styles.content_habilidades}>
                     {
                         TecConfig.map(({ name, icon }) => (
-                            <li className={activeTec == name && styles.selected} onClick={() => handleSelectTec(name)}>
+                            <li className={activeTec == name && styles.selected} onClick={() => handleSelectTec(name)} key={name}>
                                 <img src={icon} />
                             </li>
                         ))
