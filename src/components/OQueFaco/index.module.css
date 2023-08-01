@@ -42,7 +42,7 @@
         /* background-color: aqua; */
         display: flex;
         flex-direction: column-reverse;
-        align-items: center; 
+        align-items: flex-start; 
         justify-content: space-between;
         width: 90%;
         margin-top: 50px;
@@ -53,5 +53,11 @@
     }
     .imagem{
         width: 60%;
+    }
+}
+
+@media screen and (max-width: 650px ) {
+    .imagem{
+        width: 70%;
     }
 }

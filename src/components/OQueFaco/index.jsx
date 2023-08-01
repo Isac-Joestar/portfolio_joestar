@@ -12,7 +12,7 @@ export default function OQueFaco(){
                 executada para garantir que seu site seja uma representação fiel da sua marca, destacando-se 
                 da concorrência e deixando uma impressão duradoura nos seus clientes.</p>
                 <br/>
-                <p>Além disso, meu foco está em oferecer uma experiência de usuário excepcional. 
+                <p className={styles.p2}>Além disso, meu foco está em oferecer uma experiência de usuário excepcional. 
                 Com designs responsivos e otimizados para dispositivos móveis, seu site se adaptará perfeitamente a qualquer tela, 
                 garantindo uma navegação suave e agradável. Além disso, utilizo as melhores práticas de SEO para que seu site seja 
                 facilmente encontrado nos motores de busca, aumentando sua visibilidade online e atraindo mais tráfego qualificado.
