@@ -6,9 +6,8 @@
 .form label{
     margin: 9px 0px 3px 0px ;
     font-size: 17px;
-    font-style: normal;
     font-weight: 600;
-    line-height: normal;
+   
 }
 .form input{
     width: 100%;
@@ -28,7 +27,7 @@
     min-width: 100%;
 
     min-height: 200px;
-    max-height: 300px;
+    max-height: 250px;
 
 }
 
@@ -48,4 +47,16 @@
     font-size: 20px;
     cursor: pointer;
  
+}
+
+
+
+/* ERROS */
+.form p{ 
+    color: crimson;
+    font-size: 0.9rem;
+}
+
+.input_nome.erro{
+      border: 2px solid crimson !important;
 }

@@ -1,0 +1,78 @@
+.btn_mobile{
+    display: none;
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* background-color: aqua; */
+
+}
+.btn_mobile div{
+    height: 4px;
+    width: 90%;
+    border-radius: 5px;
+    background-color: rgb(19, 19, 19);
+    margin: 3px 0px;
+    
+}
+.line1, .line2, .line3{
+    transition: all 0.3s;
+    transform: rotateZ(0deg);
+}
+
+.line1.on{
+    transform: rotateZ(50deg);
+    position: absolute;
+    height: 5px;
+   
+}
+.line2.on{
+    opacity: 0;
+}
+.line3.on{
+    transform: rotateZ(-50deg);
+    position: absolute;
+    height: 5px;
+  
+}
+
+.nav_mobile{
+    width: 30%;
+    height: 0px;
+    overflow: hidden;
+
+    position: absolute;
+    top: 100%;
+    right: 0px;
+
+    /* display: none; */
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    
+    background-color: rgb(19, 19, 19);
+    color: aliceblue;
+    
+    border-radius: 0px 0px 0px 5px;
+    transition: all 0.3s;
+}
+.nav_mobile.on{
+    display: flex;
+    height: 150px;
+    padding: 10px 0px  0px 10px;
+}
+.nav_mobile li{
+    margin: 0 0 15px 0px;
+    cursor: pointer;
+    font-size: 18px;
+}
+@media screen and (max-width:650px) {
+    .btn_mobile{
+        display: flex;
+    }
+}

@@ -1,12 +1,12 @@
 .container{
     width: 100%;
-    height: 90vh;
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 5vh;
     /* background-color: antiquewhite; */
 }
-
 .text{
     width: 50%;
     font-size: 18px;
@@ -26,4 +26,32 @@
 }
 .imagem{
     width: 600px;
+}
+
+@media screen and (max-width: 1150px ) {
+    .text{
+        font-size: 16px;
+    }
+    .imagem{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 1000px ) {
+    .content_itens{
+        /* background-color: aqua; */
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center; 
+        justify-content: space-between;
+        width: 90%;
+        margin-top: 50px;
+    }
+    .text{
+        width: 100%;
+        font-size: 16px;
+    }
+    .imagem{
+        width: 60%;
+    }
 }

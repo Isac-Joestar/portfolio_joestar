@@ -8,7 +8,7 @@ export default function Home(){
                     <h2>front-end</h2>
                     <p> Potencialize sua presença online com um site 
                         personalizado que atrai e cativa seus clientes, 
-                        impulsionando seu negócio <br/> para o sucesso.</p>
+                        impulsionando seu negócio  para o sucesso.</p>
                 </div>
                 <div className={styles.content_img}>
                     <img src="/images/ilustracao1.svg"/>

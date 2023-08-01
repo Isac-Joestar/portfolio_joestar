@@ -8,7 +8,7 @@ export default function Contato(){
             <div className={styles.container}>
                 <div className={styles.content_text}>
                     <p>
-                        Estamos aqui para tornar sua visão uma realidade! Como programador front-end 
+                        Estou aqui para tornar sua visão uma realidade! Como programador front-end 
                         especializado em criação de sites, estou ansioso para ouvir sobre seu projeto.  
                         Entre em contato hoje mesmo e vamos começar a construir algo incrível juntos!
                     </p>

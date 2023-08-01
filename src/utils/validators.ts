@@ -1,7 +1,7 @@
 import { RegisterOptions } from "react-hook-form";
 
 const MailValidator: RegisterOptions = {
-    required: "É necessario colocar um email",
+    required: "É necessário colocar um email",
     minLength:{
         message: "O Email prescisa ter mais de 4 caracteres",
         value: 4,
@@ -11,16 +11,16 @@ const MailValidator: RegisterOptions = {
         value: 64
     },
     pattern:{
-        message: "O Email deve seguir o pattern name@example.com",
+        message: "insira um email valido. Exemplo: name@example.com",
         value: /^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/,
     }
 }
 
 const NameValidator: RegisterOptions = {
-    required: "É necessario colocar um nome",
+    required: "É necessário colocar um nome",
     minLength:{
-        message: "O Nome precisa de pelo menos 5 caracteres",
-        value: 5
+        message: "O Nome precisa de pelo menos 4 caracteres",
+        value: 4
     },
     maxLength:{
         message: "O Nome não pode ter mais de 64 caracteres",
@@ -29,7 +29,7 @@ const NameValidator: RegisterOptions = {
 }
 
 const MessageValidator: RegisterOptions = {
-    required: "É necessario colocar uma mensagem",
+    required: "É necessário colocar uma mensagem",
     minLength:{
         message: "A Mensagem prescisa de pelo menos 10 caracteres",
         value: 10,

@@ -42,29 +42,34 @@ export default function Email(){
             setSuccess("Enviado com sucesso")
         }
     }
-
+   
+    console.log(formState.errors.name?.message)
     return(
         <>
             <form action="" className={styles.form} onSubmit={handleSubmit(handleMailSend)}>
-            <label htmlFor="contact_name" >Nome:</label>
-            <input type="text" {...register("name",NameValidator)}/>
-            { (formState.errors.name && formState.errors.name.message) && <p>{ formState.errors.name.message }</p> }
-            <label htmlFor="">Email:</label>
-            <input type="email" {...register("email",MailValidator)}/>
+                
+                <label htmlFor="contact_name" >Nome:</label>
+                <input type="text" {...register("name",NameValidator)} className={`${styles.input_nome}${ formState.errors.name?.message != 'undefined' ? styles.erro : styles.ok}`}/>
+                { (formState.errors.name && formState.errors.name.message) && <p>{ formState.errors.name.message }</p> }
+                
+                <label htmlFor="">Email:</label>
+                <input type="email" {...register("email",MailValidator)}/>
                 {(formState.errors.email && formState.errors.email.message) && <p>{formState.errors.email.message}</p>}
-            <label htmlFor="">Mensagem:</label>
-            <textarea {...register("message",MessageValidator)} cols={30} rows={10}></textarea>
+                
+                <label htmlFor="">Mensagem:</label>
+                <textarea {...register("message",MessageValidator)} cols={30} rows={10}></textarea>
                 {(formState.errors.message && formState.errors.message.message) && <p>{formState.errors.message.message}</p>}
-            <div className={styles.content_btn}>
-                <button>
-                    {isLoading && <p>Carregando...</p> }
-                    Enviar
-                </button>
-            </div>    
-            {
-                success && <p>{success }</p>
-            }
-        </form>
+                
+                <div className={styles.content_btn}>
+                    <button>
+                        {isLoading && <p>Carregando...</p> }
+                        Enviar
+                    </button>
+                </div>    
+                {
+                    success && <p>{success }</p>
+                }
+            </form>
         </>
     )
 }
