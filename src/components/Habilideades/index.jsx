@@ -139,6 +139,17 @@ export default function Habilidades() {
                                         }
                                     </ul>
                                 </div>
+
+                                <ul className={styles.content_mobile}>
+                                    <li className={styles.proj_mobile}>
+                                        <div className={styles.mobile_img}>
+                                            <img src="/images/ToDoListProj.jpg" alt="" />
+                                        </div>
+                                        <p className={styles.mobile_title}>To do List</p>
+                                        <p className={styles.mobile_visitar}>Visitar</p>
+                                        <p className={styles.mobile_data}>31/07/2005</p>   
+                                    </li> 
+                                </ul>
                         </>
                         :
                         <div>

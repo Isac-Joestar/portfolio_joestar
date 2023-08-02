@@ -183,6 +183,11 @@
     width: 100%;
 }
 
+
+.content_mobile{
+    display: none;
+}
+
 @media screen and (max-width: 1350px) {
     .content{
         height: 80vh;
@@ -241,6 +246,80 @@
     }
     .name_hab{
         font-size: 30px;
+    }
+    .proj_left, .proj_right{
+       display: none;
+    
+    }
+    .content_mobile{
+        padding-top: 15vh;
+        /* background-color: aqua; */
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .proj_mobile{
+        background-color: rgb(255, 255, 255);
+        width: 90%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        
+        position: relative;
+
+        padding: 4px;
+        border-radius: 5px;
+    }
+    .mobile_img{
+        width: 100%;
+        height: 100%;
+         /*background-color: blueviolet; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+       
+    } 
+    .mobile_img img{
+        width: 102%;
+        opacity: 0.8;
+        /* width: 100%; */
+        /* display: none; */
+    }
+
+    .proj_mobile p, .proj_mobile a{
+        z-index: 2;
+        color: var(--color1);
+        position: absolute;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 124.523%; /* 26.15px */
+        letter-spacing: 0.315px;
+    }
+    .mobile_title{
+        top: 7px;
+        left: 12px;
+        font-size: 1.4rem;
+    }
+    .mobile_visitar{
+        width: 100%;
+        height: 100%;
+        /* background-color: antiquewhite; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 2.3rem;
+   
+    }
+    .mobile_data{
+        bottom: 7px;
+        right: 12px;
     }
 }
 @media screen and (max-width: 600px) {
