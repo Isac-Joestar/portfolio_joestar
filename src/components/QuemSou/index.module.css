@@ -158,4 +158,23 @@
         justify-content: center;
         /* background-color: aqua; */
     }
+    .content_img{
+        margin-right: 0px;
+    }
+}
+@media screen and (max-width: 600px){
+    .content_img{
+        height: auto;
+        width: 40%;
+        margin-right: 0px;
+        /* background-color: aqua; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .content_img img{
+        height: auto;
+        width: 100%;
+    }
 }

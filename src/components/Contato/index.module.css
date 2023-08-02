@@ -52,7 +52,6 @@
     }
  
 }
-
 @media screen and (max-width: 950px) {
     .container{
         width: 100%;
@@ -84,5 +83,12 @@
     }
     .section{
         padding-bottom: 5vh;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .content_text{
+        width: 90%;
+        font-size: 18px;
     }
 }

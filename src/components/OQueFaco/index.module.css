@@ -23,6 +23,7 @@
     justify-content: space-between;
     width: 90%;
     margin-top: 50px;
+   
 }
 .imagem{
     width: 600px;
@@ -42,7 +43,7 @@
         /* background-color: aqua; */
         display: flex;
         flex-direction: column-reverse;
-        align-items: flex-start; 
+        align-items: center; 
         justify-content: space-between;
         width: 90%;
         margin-top: 50px;
@@ -58,6 +59,11 @@
 
 @media screen and (max-width: 650px ) {
     .imagem{
-        width: 70%;
+        width: 90%;
+    }
+    
+    .text{
+        width: 100%;
+        text-align: center;
     }
 }
