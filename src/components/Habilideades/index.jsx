@@ -139,16 +139,25 @@ export default function Habilidades() {
                                         }
                                     </ul>
                                 </div>
-
                                 <ul className={styles.content_mobile}>
-                                    <li className={styles.proj_mobile}>
-                                        <div className={styles.mobile_img}>
-                                            <img src="/images/ToDoListProj.jpg" alt="" />
-                                        </div>
-                                        <p className={styles.mobile_title}>To do List</p>
-                                        <p className={styles.mobile_visitar}>Visitar</p>
-                                        <p className={styles.mobile_data}>31/07/2005</p>   
-                                    </li> 
+                                    {
+                                        mappedProjects.map(({ thumb, name, date }, i) => {
+                                            return (
+                                                <li className={styles.proj_mobile}>
+                                                    <div className={styles.content_card_proj}>
+                                                        <div className={styles.mobile_img}>
+                                                            <img src={thumb} alt="" />
+                                                        </div>
+                                                        <div className={styles.mobile_text}>
+                                                            <p className={styles.mobile_title}>{name}</p>
+                                                            <p className={styles.mobile_visitar}>Visitar</p>
+                                                            <p className={styles.mobile_data}>{date}</p>   
+                                                        </div>
+                                                    </div>
+                                                </li> 
+                                            )
+                                        })
+                                    }
                                 </ul>
                         </>
                         :

@@ -46,7 +46,7 @@
 
 .content{
     width: 100%;
-    height: 60vh;
+    min-height: 60vh;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -188,9 +188,95 @@
     display: none;
 }
 
+
+
+/* Habilidades Mobile */
+.content_mobile{
+    padding-top: 15vh;
+    /* background-color: aqua; */
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.proj_mobile{
+    background-color: rgb(255, 255, 255);
+    width: 90%;
+    height: auto;
+
+    padding: 4px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.content_card_proj{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+    position: relative;
+}
+.mobile_img{
+    width: 100%;
+    height: 100%;
+     /*background-color: blueviolet; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 5px;
+   
+} 
+.mobile_img img{
+    width: 102%;
+    /* opacity: 0.8; */
+    /* width: 100%; */
+    /* display: none; */
+}
+.mobile_text{
+    z-index: 2;
+    color: aliceblue;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(19, 19, 19, 0.644);
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+
+
+}
+.mobile_title{
+    top: 7px;
+    left: 12px;
+    font-size: 1.4rem;
+    z-index: 3;
+}
+.mobile_visitar{
+    width: 100%;
+
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 2.3rem;
+
+}
+.mobile_data{
+    bottom: 7px;
+    right: 12px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
 @media screen and (max-width: 1350px) {
     .content{
-        height: 80vh;
+        min-height: 80vh;
     }
     .proj_left ul,
     .proj_right ul{
@@ -198,9 +284,6 @@
     }
 }
 @media screen and (max-width: 1000px) {
-    .content{
-        height: 80vh;
-    }
     .proj_left ul,
     .proj_right ul{
         margin-top: 20vh;
@@ -249,80 +332,13 @@
     }
     .proj_left, .proj_right{
        display: none;
-    
     }
     .content_mobile{
-        padding-top: 15vh;
-        /* background-color: aqua; */
-        width: 100%;
-        height: 100%;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
     }
-    .proj_mobile{
-        background-color: rgb(255, 255, 255);
-        width: 90%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        
-        position: relative;
-
-        padding: 4px;
-        border-radius: 5px;
-    }
-    .mobile_img{
-        width: 100%;
-        height: 100%;
-         /*background-color: blueviolet; */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-       
-    } 
-    .mobile_img img{
-        width: 102%;
-        opacity: 0.8;
-        /* width: 100%; */
-        /* display: none; */
-    }
-
-    .proj_mobile p, .proj_mobile a{
-        z-index: 2;
-        color: var(--color1);
-        position: absolute;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 124.523%; /* 26.15px */
-        letter-spacing: 0.315px;
-    }
-    .mobile_title{
-        top: 7px;
-        left: 12px;
-        font-size: 1.4rem;
-    }
-    .mobile_visitar{
-        width: 100%;
-        height: 100%;
-        /* background-color: antiquewhite; */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        font-size: 2.3rem;
    
-    }
-    .mobile_data{
-        bottom: 7px;
-        right: 12px;
-    }
 }
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
     .content_habilidades li{
         height: 50px;
         width: 50px;
@@ -345,4 +361,4 @@
         padding-top: 50px;
     }
 
-}
+} */
