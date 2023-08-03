@@ -141,7 +141,7 @@ export default function Habilidades() {
                                 </div>
                                 <ul className={styles.content_mobile}>
                                     {
-                                        mappedProjects.map(({ thumb, name, date }, i) => {
+                                        mappedProjects.map(({ thumb, name, date }) => {
                                             return (
                                                 <li className={styles.proj_mobile}>
                                                     <div className={styles.content_card_proj}>
