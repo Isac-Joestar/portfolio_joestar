@@ -6,11 +6,11 @@ export default function Footer(){
             <div className={styles.content_nav}>
                 <p>Navegação</p>
                 <ul>
-                    <li>Home</li>
-                    <li>O que faço</li>
-                    <li>Habilidades</li>
-                    <li>Quem sou</li>
-                    <li>Contato</li>
+                    <li><a href="/#">Home</a></li>
+                    <li><a href="/#oqfaco">O que faço</a></li>
+                    <li><a href="/#habilidades">Habilidades</a></li>
+                    <li><a href="/#quemsou">Quem sou</a></li>
+                    <li><a href="/#contato">Contato</a></li>
                 </ul>
             </div>
 

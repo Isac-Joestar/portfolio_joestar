@@ -104,7 +104,7 @@ export default function Habilidades() {
                                         {
                                             mappedProjects.map(({ thumb, name, date }, i) => {
                                                 if (i % 2 == 0) return (
-                                                    <li className={styles.proj}>
+                                                    <li className={styles.proj} key={name}>
                                                         <div className={styles.proj_img}>
                                                             <img src={thumb} alt="" />
                                                         </div>
@@ -124,7 +124,7 @@ export default function Habilidades() {
                                         {
                                             mappedProjects.map(({ thumb, name, date }, i) => {
                                                 if (i % 2 != 0) return (
-                                                    <li className={styles.proj}>
+                                                    <li className={styles.proj} key={name}>
                                                         <div className={styles.content_infs}>
                                                             <p className={styles.proj_title}>{name}</p>
                                                             <div></div>
@@ -143,7 +143,7 @@ export default function Habilidades() {
                                     {
                                         mappedProjects.map(({ thumb, name, date }) => {
                                             return (
-                                                <li className={styles.proj_mobile}>
+                                                <li className={styles.proj_mobile} key={name}>
                                                     <div className={styles.content_card_proj}>
                                                         <div className={styles.mobile_img}>
                                                             <img src={thumb} alt="" />

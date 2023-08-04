@@ -53,6 +53,7 @@
     justify-content: center;
     background-color: var(--bg2);
     position: relative;
+    
 }
 
 .name_hab{
@@ -69,13 +70,14 @@
     height: 100%;
     width: 48%; 
     display: flex;
-    /* flex-direction: column; */
     align-items: center;
+    background-color: aqua;
 
 }
 .proj_left{
     border-right: 5px solid #525151;
     justify-content: flex-end;
+    /* background-color: aqua; */
 }
 .proj_right{
     border-left: 5px solid #525151;
@@ -89,13 +91,14 @@
     /* padding: 40px 0px; */
     display: flex;
     flex-direction: column;
-    /* background-color: antiquewhite; */
+    background-color: antiquewhite;
     /* teste */
     
 }
 
 .proj_left ul{
     gap: 20px;
+    padding-bottom: 50px;
 }
 .proj_right ul{
     gap: 20px;
@@ -108,7 +111,7 @@
     flex-direction: row;
     align-items: center;
     width: 450px;
-    /* background-color: aqua; */
+    /* background-color: rgb(255, 0, 0); */
     transition: all 0.4s;
 }
 .proj_left ul li{
@@ -250,8 +253,7 @@
 
 }
 .mobile_title{
-    top: 7px;
-    left: 12px;
+    margin: 12px 0px 0px 12px;
     font-size: 1.4rem;
     z-index: 3;
 }
@@ -267,8 +269,7 @@
 
 }
 .mobile_data{
-    bottom: 7px;
-    right: 12px;
+    margin: 0px 7px 12px 0px;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
@@ -280,7 +281,7 @@
     }
     .proj_left ul,
     .proj_right ul{
-        margin-top: 20vh;
+        margin-top: 15vh;
     }
 }
 @media screen and (max-width: 1000px) {
