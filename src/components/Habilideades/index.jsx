@@ -4,34 +4,40 @@ import TopicosTitle from '../TopicosTitle/index'
 import styles from './index.module.css'
 import React, { useState } from 'react';
 
+var data = new Date();
+var dia = String(data.getDate()).padStart(2, '0');
+var mes = String(data.getMonth() + 1).padStart(2, '0');
+var ano = data.getFullYear();
+const dataAtual = dia + '/' + mes + '/' + ano;
+
 const ProjetsConfig = [
     {
         name: "To Do List",
         thumb: "/images/ToDoListProj.jpg",
-        date: "01/12/2022",
+        date: `${dataAtual}`,
         tecs: ["REACT", "JS", "HTML", "CSS", "FIGMA"],
-        url: "LINKDOPROJETO",
+        url: "https://to-do-list-two-kappa.vercel.app/",
     },
     {
         name: "Pokedex",
-        thumb: "/images/pokedex.avif",
-        date: "01/12/2022",
+        thumb: "/images/Pokedex.jpg",
+        date: "Em Breve",
         tecs: ["REACT", "JS", "HTML", "CSS"],
         url: "LINKDOPROJETO",
     },
     {
         name: "Loopstudio",
         thumb: "/images/Loopstudio.jpg",
-        date: "01/12/2022",
+        date: "28/01/2023",
         tecs: [ "JS", "HTML", "CSS"],
-        url: "LINKDOPROJETO",
+        url: "https://loopstudio-vr.vercel.app/",
     },
     {
         name: "Joestar Geek's",
         thumb: "/images/JoestarGeek.jpg",
-        date: "01/12/2022",
+        date: "08/03/2023",
         tecs: [ "JS", "HTML", "CSS", "FIGMA"],
-        url: "LINKDOPROJETO",
+        url: "https://catalogo-de-animes-eta.vercel.app/",
     }
 ]
 
@@ -102,11 +108,16 @@ export default function Habilidades() {
                                 <div className={styles.proj_left}>
                                     <ul>
                                         {
-                                            mappedProjects.map(({ thumb, name, date }, i) => {
+                                            mappedProjects.map(({ thumb, name, date, url }, i) => {
                                                 if (i % 2 == 0) return (
                                                     <li className={styles.proj} key={name}>
-                                                        <div className={styles.proj_img}>
-                                                            <img src={thumb} alt="" />
+                                                        <div className={styles.content_desk_proj}>
+                                                            <div className={styles.proj_img}>
+                                                                <img src={thumb} alt="" />
+                                                                <div className={styles.content_visitar}>
+                                                                    <a href={url} target="_blank">Visitar</a>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                         <div className={styles.content_infs}>
                                                             <p className={styles.proj_title}>{name}</p>
@@ -122,7 +133,7 @@ export default function Habilidades() {
                                 <div className={styles.proj_right}>
                                     <ul>
                                         {
-                                            mappedProjects.map(({ thumb, name, date }, i) => {
+                                            mappedProjects.map(({ thumb, name, date, url }, i) => {
                                                 if (i % 2 != 0) return (
                                                     <li className={styles.proj} key={name}>
                                                         <div className={styles.content_infs}>
@@ -130,8 +141,13 @@ export default function Habilidades() {
                                                             <div></div>
                                                             <p className={styles.proj_data}>{date}</p>
                                                         </div>
-                                                        <div className={styles.proj_img}>
-                                                            <img src={thumb} alt="" />
+                                                        <div className={styles.content_desk_proj}>
+                                                            <div className={styles.proj_img}>
+                                                                <img src={thumb} alt="" />
+                                                                <div className={styles.content_visitar}>
+                                                                    <a href={url} target="_blank">Visitar</a>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </li>
                                                 )
@@ -144,7 +160,7 @@ export default function Habilidades() {
                                         mappedProjects.map(({ thumb, name, date }) => {
                                             return (
                                                 <li className={styles.proj_mobile} key={name}>
-                                                    <div className={styles.content_card_proj}>
+                                                    <div className={styles.content_mobile_proj}>
                                                         <div className={styles.mobile_img}>
                                                             <img src={thumb} alt="" />
                                                         </div>
