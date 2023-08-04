@@ -46,7 +46,7 @@
 
 .content{
     width: 100%;
-    min-height: 60vh;
+    height: 60vh;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -92,7 +92,6 @@
     display: flex;
     flex-direction: column;
     background-color: antiquewhite;
-    /* teste */
     
 }
 
@@ -195,7 +194,6 @@
 
 /* Habilidades Mobile */
 .content_mobile{
-    padding-top: 15vh;
     /* background-color: aqua; */
     width: 100%;
     height: 100%;
@@ -206,7 +204,7 @@
 }
 .proj_mobile{
     background-color: rgb(255, 255, 255);
-    width: 90%;
+    width: 70%;
     height: auto;
 
     padding: 4px;
@@ -277,22 +275,17 @@
 
 @media screen and (max-width: 1350px) {
     .content{
-        min-height: 80vh;
+        height: 80vh;
+        padding-top: 15vh;
     }
-    .proj_left ul,
-    .proj_right ul{
+    /* .proj_left ,
+    .proj_right {
         margin-top: 15vh;
-    }
+    } */
 }
 @media screen and (max-width: 1000px) {
-    .proj_left ul,
-    .proj_right ul{
-        margin-top: 20vh;
-    }
-
     .proj_left ul li, .proj_right ul li{
         width: auto;
-      
     }
 }
 @media screen and (max-width: 800px) {
@@ -302,7 +295,6 @@
     .proj_data{
         font-size: 13px;
     }
-
     .content_habilidades li{
         height: 70px;
         width: 70px;
@@ -311,14 +303,12 @@
         width: 50%;
         /* background-color: antiquewhite; */
     }
-
     .proj_img{
         width:50%;
         padding: 3px;
         height: auto;
 
     }
-
     .proj_left ul li:hover .proj_img, .proj_right ul li:hover .proj_img{
         width: 60%;
     }
@@ -336,6 +326,9 @@
     }
     .content_mobile{
         display: flex;
+    }
+    .content{
+        height: auto;
     }
    
 }
