@@ -150,7 +150,9 @@ export default function Habilidades() {
                                                         </div>
                                                         <div className={styles.mobile_text}>
                                                             <p className={styles.mobile_title}>{name}</p>
-                                                            <p className={styles.mobile_visitar}>Visitar</p>
+                                                            <a href="#" className={styles.mobile_visitar}>
+                                                                <p>Visitar</p>
+                                                            </a>
                                                             <p className={styles.mobile_data}>{date}</p>   
                                                         </div>
                                                     </div>

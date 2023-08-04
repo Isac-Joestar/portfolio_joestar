@@ -90,6 +90,12 @@
     .content_text{
         width: 90%;
         font-size: 18px;
+    }
+}
+@media screen and (max-width: 410px) {
+    .content_form{
+        width: 90%;
+        height: 100%;
         
     }
 }
