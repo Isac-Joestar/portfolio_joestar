@@ -327,14 +327,11 @@
         width: 50%;
         /* background-color: antiquewhite; */
     }
-    .proj_img{
-        width:50%;
-        padding: 3px;
-        height: auto;
-
-    }
-    .proj_left ul li:hover .proj_img, .proj_right ul li:hover .proj_img{
+    .proj_left ul li:hover .content_desk_proj, .proj_right ul li:hover .content_desk_proj{
         width: 60%;
+    }
+    .content_desk_proj{
+        width: 50%;
     }
 }
 /* Reponsividade Mobile */
