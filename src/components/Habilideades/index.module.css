@@ -1,3 +1,5 @@
+
+
 .section{
     width: 100%;
     min-height: 100vh;
@@ -108,14 +110,18 @@
 
 @keyframes projs {
     0%{
-        width: 50%;
+        width: 60%;
     }
     100%{
         width: 100%;
     }
     
 }
-.proj_left ul li, .proj_right ul li{
+.animate{
+    animation-name: projs;
+    animation-duration: 1s;
+}
+.proj{
     height: 200px;
     width: 100%;
     display: flex;
@@ -124,8 +130,7 @@
     
     /* background-color: rgb(255, 0, 0); */
     transition: all 0.4s;
-    animation-name: projs;
-    animation-duration: 1s;
+   
 }
 .proj_left ul li{
     justify-content: flex-end;
@@ -233,9 +238,36 @@
     width: 100%;
 }
 
+@keyframes projMobileLeft {
+    0%{
+        transform: translate(-50%);
+        opacity: 0.5;
+    }
+    100%{
+        transform: translate(0%);
+        opacity: 1;
+    }
+}
 
+@keyframes  projMobileRight {
+    0%{
+        transform: translate(50%);
+        opacity: 0.5;
+    }
+    100%{
+        transform: translate(0%);
+        opacity: 1;
+    }
+}
 
-
+.proj_mobile.left{
+    animation-name: projMobileLeft;
+    animation-duration: 1s;
+}
+.proj_mobile.right{
+    animation-name: projMobileRight;
+    animation-duration: 1s;
+}
 /* Habilidades Mobile */
 .content_mobile{
     /* background-color: aqua; */

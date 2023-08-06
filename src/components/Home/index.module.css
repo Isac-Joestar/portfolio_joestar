@@ -2,14 +2,17 @@
 
 @keyframes LoadingText {
     0%{
-        transform: translate(-90%, -15%);
+        transform: translate(-50%, -35%) scale(0.7);
         opacity: 0.5;
+        
+        
     }
     100%{
-        transform: translate(0%);
+        transform: translate(0%) scale(1);
         opacity: 1;
     }
 }
+
 @keyframes LoadingImg {
     0%{
         transform: translate(-50%, -15%);
@@ -90,7 +93,7 @@
     /* background-color: antiquewhite; */
 
     animation-name: LoadingImg;
-    animation-duration: 3.3s;
+    animation-duration: 3s;
 }
 .content_img img{
     width: 100%;

@@ -2,7 +2,7 @@
 
 import TopicosTitle from '../TopicosTitle/index'
 import styles from './index.module.css'
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 var data = new Date();
 var dia = String(data.getDate()).padStart(2, '0');
@@ -68,14 +68,18 @@ const TecConfig = [
         icon: "/images/Figma.svg",
     }
 ]
+   
 
 export default function Habilidades() {
 
     const [activeTec, setActiveTec] = useState(TecConfig[0].name);
+    const [shouldAnimate, setShouldAnimate] = useState(false);
 
     const handleSelectTec = (tecName) => {
         setActiveTec(tecName)
     }
+   
+
 
     const mappedProjects = ProjetsConfig.filter(({ tecs }) => {
         if (activeTec == null) return false;
@@ -87,6 +91,15 @@ export default function Habilidades() {
         return name == activeTec
     })
 
+    useEffect(() => {
+        setShouldAnimate(true); // Ativa a animação quando a tecnologia é alterada
+        const animationTimeout = setTimeout(() => {
+          setShouldAnimate(false); // Desativa a animação após o tempo da animação CSS
+        }, 1000); // Defina o tempo com base na duração da sua animação CSS
+    
+        return () => clearTimeout(animationTimeout);
+      }, [activeTec]);
+    
     return (
         <section className={styles.section} id='habilidades'>
             <TopicosTitle title="Habilidades" />
@@ -110,21 +123,24 @@ export default function Habilidades() {
                                         {
                                             mappedProjects.map(({ thumb, name, date, url }, i) => {
                                                 if (i % 2 == 0) return (
-                                                    <li className={styles.proj} key={name}>
-                                                        <div className={styles.content_desk_proj}>
-                                                            <div className={styles.proj_img}>
-                                                                <img src={thumb} alt="" />
-                                                                <div className={styles.content_visitar}>
-                                                                    <a href={url} target="_blank">Visitar</a>
+
+                                                        <li  className={`${styles.proj}
+                                                        ${shouldAnimate ? styles.animate : ''
+                                                          }`} key={name} >
+                                                            <div className={styles.content_desk_proj}>
+                                                                <div className={styles.proj_img}>
+                                                                    <img src={thumb} alt="" />
+                                                                    <div className={styles.content_visitar}>
+                                                                        <a href={url} target="_blank">Visitar</a>
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                        <div className={styles.content_infs}>
-                                                            <p className={styles.proj_title}>{name}</p>
-                                                            <div></div>
-                                                            <p className={styles.proj_data}>{date}</p>
-                                                        </div>
-                                                    </li>
+                                                            <div className={styles.content_infs}>
+                                                                <p className={styles.proj_title}>{name}</p>
+                                                                <div></div>
+                                                                <p className={styles.proj_data}>{date}</p>
+                                                            </div>
+                                                        </li>
                                                 )
                                             })
                                         }
@@ -132,10 +148,11 @@ export default function Habilidades() {
                                 </div>
                                 <div className={styles.proj_right}>
                                     <ul>
-                                        {
+                                        { 
                                             mappedProjects.map(({ thumb, name, date, url }, i) => {
                                                 if (i % 2 != 0) return (
-                                                    <li className={styles.proj} key={name}>
+                                                    <li className={`${styles.proj} ${shouldAnimate ? styles.animate : ''}`}
+                                                     key={name} >
                                                         <div className={styles.content_infs}>
                                                             <p className={styles.proj_title}>{name}</p>
                                                             <div></div>
@@ -156,10 +173,27 @@ export default function Habilidades() {
                                     </ul>
                                 </div>
                                 <ul className={styles.content_mobile}>
+
                                     {
-                                        mappedProjects.map(({ thumb, name, date }) => {
-                                            return (
-                                                <li className={styles.proj_mobile} key={name}>
+                                        mappedProjects.map(({ thumb, name, date }, i) => {
+                                            if (i % 2 == 0) return (
+                                                <li className={`${styles.proj_mobile} ${shouldAnimate ? styles.left :"" }`} key={name}>
+                                                    <div className={styles.content_mobile_proj}>
+                                                        <div className={styles.mobile_img}>
+                                                            <img src={thumb} alt="" />
+                                                        </div>
+                                                        <div className={styles.mobile_text}>
+                                                            <p className={styles.mobile_title}>{name}</p>
+                                                            <a href="#" className={styles.mobile_visitar}>
+                                                                <p>Visitar</p>
+                                                            </a>
+                                                            <p className={styles.mobile_data}>{date}</p>   
+                                                        </div>
+                                                    </div>
+                                                </li> 
+                                            )
+                                            if (i % 2 != 0) return (
+                                                <li className={`${styles.proj_mobile} ${shouldAnimate ? styles.right :"" }`} key={name}>
                                                     <div className={styles.content_mobile_proj}>
                                                         <div className={styles.mobile_img}>
                                                             <img src={thumb} alt="" />
