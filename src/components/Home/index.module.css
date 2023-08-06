@@ -1,8 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700&display=swap');
 
-@keyframes LoadingText {
+@keyframes LoadingH1 {
     0%{
-        transform: translate(-50%, -35%) scale(0.7);
+        transform: translate(-50%, -35%) scale(0.6);
+        opacity: 0.5;
+        
+        
+    }
+    100%{
+        transform: translate(0%) scale(1);
+        opacity: 1;
+    }
+}
+@keyframes LoadingH2 {
+    0%{
+        transform: translate(-50%, -35%) scale(0.6);
+        opacity: 0.5;
+        
+        
+    }
+    100%{
+        transform: translate(0%) scale(1);
+        opacity: 1;
+    }
+}
+@keyframes LoadingP {
+    0%{
+        transform: translate(-50%, -35%) scale(0.6);
         opacity: 0.5;
         
         
@@ -58,8 +82,7 @@
     align-items: start;
     justify-content: flex-start;
     /* background-color: antiquewhite; */
-    animation-name: LoadingText;
-    animation-duration: 2.5s;
+   
 }
 .content_text h1,
 .content_text h2{
@@ -73,10 +96,16 @@
 .content_text h1{
     font-size: 5rem;
     white-space: nowrap;
+
+    animation-name: LoadingH1;
+    animation-duration: 1.2s;
 }
 .content_text h2{
     font-size: 6.1rem;
     white-space: nowrap;
+
+    animation-name: LoadingH2;
+    animation-duration: 1.4s;
     
 }
 .content_text p{
@@ -86,6 +115,9 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+
+    animation-name: LoadingP;
+    animation-duration: 1.6s;
 }
 
 .content_img{
@@ -93,7 +125,7 @@
     /* background-color: antiquewhite; */
 
     animation-name: LoadingImg;
-    animation-duration: 3s;
+    animation-duration: 1.7s;
 }
 .content_img img{
     width: 100%;
