@@ -98,14 +98,14 @@
     white-space: nowrap;
 
     animation-name: LoadingH1;
-    animation-duration: 1.2s;
+    animation-duration: 0.9s;
 }
 .content_text h2{
     font-size: 6.1rem;
     white-space: nowrap;
 
     animation-name: LoadingH2;
-    animation-duration: 1.4s;
+    animation-duration: 1.2s;
     
 }
 .content_text p{
@@ -117,7 +117,7 @@
     line-height: normal;
 
     animation-name: LoadingP;
-    animation-duration: 1.6s;
+    animation-duration: 1.5s;
 }
 
 .content_img{
@@ -125,7 +125,7 @@
     /* background-color: antiquewhite; */
 
     animation-name: LoadingImg;
-    animation-duration: 1.7s;
+    animation-duration: 1.5s;
 }
 .content_img img{
     width: 100%;
@@ -241,14 +241,23 @@
     .content_text h1{
         font-size: 2.5rem;
         white-space: nowrap;
+
+        animation-name: LoadingH1;
+        animation-duration: 0.9s;
     }
     .content_text h2{
         font-size: 3.1rem;
         white-space: nowrap;
+
+        animation-name: LoadingH2;
+        animation-duration: 0.9s;
         
     }
      .content_text p{
         font-size: 17px; 
+
+        animation-name: LoadingP;
+        animation-duration: 0.9s;
     }
 }
 @media screen and (max-width: 600px){
