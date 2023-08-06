@@ -1,7 +1,20 @@
+@keyframes Loading {
+    0%{
+        transform: translate(0%, 100%);
+        opacity: 0.5;
+    }
+    100%{
+        transform: translate(0%);
+        opacity: 1;
+    }
+}
+
 .topico{
     width: 100%;
     /* background-color: aqua; */
     text-align: center;
+    animation-name: Loading;
+    animation-duration: 3s;
 }
 .topico h3{
     font-size: 2.5rem;

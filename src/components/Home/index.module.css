@@ -1,5 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700&display=swap');
 
+@keyframes LoadingText {
+    0%{
+        transform: translate(-90%, -15%);
+        opacity: 0.5;
+    }
+    100%{
+        transform: translate(0%);
+        opacity: 1;
+    }
+}
+@keyframes LoadingImg {
+    0%{
+        transform: translate(90%, -15%);
+        opacity: 0.5;
+    }
+    100%{
+        transform: translate(0%);
+        opacity: 1;
+    }
+}
+
+
 .main{
     display: flex;
     align-items: center;
@@ -8,17 +30,21 @@
     min-height: 90vh;
     padding-bottom: 5vh;
     width: 100%;
+    overflow: hidden;
     
 }
 .container{
     margin-top: 4vh;
     width: 85%;
-    height: auto;
+    height: 65vh;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
     /* background-color: aqua; */
+
+   
+   
 }
 
 
@@ -29,6 +55,8 @@
     align-items: start;
     justify-content: flex-start;
     /* background-color: antiquewhite; */
+    animation-name: LoadingText;
+    animation-duration: 2.5s;
 }
 .content_text h1,
 .content_text h2{
@@ -60,6 +88,9 @@
 .content_img{
     width: 500px;
     /* background-color: antiquewhite; */
+
+    animation-name: LoadingImg;
+    animation-duration: 2.5s;
 }
 .content_img img{
     width: 100%;
