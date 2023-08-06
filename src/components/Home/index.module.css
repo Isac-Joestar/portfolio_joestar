@@ -12,7 +12,7 @@
 }
 @keyframes LoadingImg {
     0%{
-        transform: translate(90%, -15%);
+        transform: translate(-50%, -15%);
         opacity: 0.5;
     }
     100%{
