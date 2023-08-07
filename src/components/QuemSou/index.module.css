@@ -156,7 +156,10 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        /* background-color: aqua; */
+        gap: 10px;
+    }
+    .list li{
+        margin-right: 0px;
     }
     .content_img{
         margin-right: 0px;

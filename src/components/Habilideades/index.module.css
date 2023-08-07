@@ -447,10 +447,35 @@
         font-size: 1rem;
     }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 350px) {
     .content_habilidades li{
         width: 40px;
         height: 40px;
+    }
+    .mobile_title{
+        font-size: 1.2rem;
+    }
+    .mobile_visitar{
+        font-size: 1.7rem;
+    }
+    .mobile_data{
+        font-size: 1rem;
+    }
+   
+}
+@media screen and (max-width: 350px) {
+    .content_habilidades li{
+        width: 40px;
+        height: 40px;
+    }
+    .mobile_title{
+        font-size: 1rem;
+    }
+    .mobile_visitar{
+        font-size: 1.5rem;
+    }
+    .mobile_data{
+        font-size: 0.9rem;
     }
    
 }

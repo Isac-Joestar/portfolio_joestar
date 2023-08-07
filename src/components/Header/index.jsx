@@ -6,7 +6,9 @@ export default function Header(){
     return(
         <header className={styles.header}>
             <div className={styles.content_logo}>
-                <p><a href="/#">Isac Joestar</a></p>
+                <a href="#">
+                    <img src="/images/logo/LogoTransparente.png" alt="" />
+                </a>
             </div>
             <ul className={styles.nav}>
                 <li><a href="/#">Home</a></li>

@@ -12,7 +12,7 @@ const dataAtual = dia + '/' + mes + '/' + ano;
 
 const ProjetsConfig = [
     {
-        name: "To Do List",
+        name: "To Do List (Versão Beta)",
         thumb: "/images/ToDoListProj.jpg",
         date: `${dataAtual}`,
         tecs: ["REACT", "JS", "HTML", "CSS", "FIGMA"],
