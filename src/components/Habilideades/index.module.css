@@ -227,7 +227,7 @@
     align-items: center;
     justify-content: center;
 
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: aliceblue;
 
     opacity: 0;
@@ -365,6 +365,9 @@
     .proj_left ul, .proj_right ul{
         width: auto;
     }
+    .content_visitar a{
+        font-size: 1rem;   
+    }
 }
 @media screen and (max-width: 800px) {
     .proj_title{
@@ -475,7 +478,23 @@
         font-size: 1.5rem;
     }
     .mobile_data{
-        font-size: 0.9rem;
+        font-size: 0.rem;
+    }
+   
+}
+@media screen and (max-width: 350px) {
+    .content_habilidades li{
+        width: 40px;
+        height: 40px;
+    }
+    .mobile_title{
+        font-size: 1rem;
+    }
+    .mobile_visitar{
+        font-size: 1.2rem;
+    }
+    .mobile_data{
+        font-size: 0.rem;
     }
    
 }

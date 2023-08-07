@@ -12,18 +12,22 @@ const dataAtual = dia + '/' + mes + '/' + ano;
 
 const ProjetsConfig = [
     {
-        name: "To Do List (Versão Beta)",
+        name: "To Do List",
         thumb: "/images/ToDoListProj.jpg",
         date: `${dataAtual}`,
         tecs: ["REACT", "JS", "HTML", "CSS", "FIGMA"],
         url: "https://to-do-list-two-kappa.vercel.app/",
+        urlText: 'Em desenvolvimento',
+        target: '#habilidades'
     },
     {
         name: "Pokedex",
         thumb: "/images/Pokedex.jpg",
         date: "Em Breve",
         tecs: ["REACT", "JS", "HTML", "CSS"],
-        url: "LINKDOPROJETO",
+        url: "#habilidades",
+        urlText: 'Em breve',
+        target: ''
     },
     {
         name: "Loopstudio",
@@ -31,6 +35,9 @@ const ProjetsConfig = [
         date: "28/01/2023",
         tecs: [ "JS", "HTML", "CSS"],
         url: "https://loopstudio-vr.vercel.app/",
+        urlText: 'Visitar',
+        target: '_blank'
+        
     },
     {
         name: "Joestar Geek's",
@@ -38,6 +45,8 @@ const ProjetsConfig = [
         date: "08/03/2023",
         tecs: [ "JS", "HTML", "CSS", "FIGMA"],
         url: "https://catalogo-de-animes-eta.vercel.app/",
+        urlText: 'Visitar',
+        target: '_blank'
     }
 ]
 
@@ -121,7 +130,7 @@ export default function Habilidades() {
                                 <div className={styles.proj_left}>
                                     <ul>
                                         {
-                                            mappedProjects.map(({ thumb, name, date, url }, i) => {
+                                            mappedProjects.map(({ thumb, name, date, url, urlText, target }, i) => {
                                                 if (i % 2 == 0) return (
 
                                                         <li  className={`${styles.proj}
@@ -131,7 +140,7 @@ export default function Habilidades() {
                                                                 <div className={styles.proj_img}>
                                                                     <img src={thumb} alt="" />
                                                                     <div className={styles.content_visitar}>
-                                                                        <a href={url} target="_blank">Visitar</a>
+                                                                        <a href={url} target={target}>{urlText}</a>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -149,7 +158,7 @@ export default function Habilidades() {
                                 <div className={styles.proj_right}>
                                     <ul>
                                         { 
-                                            mappedProjects.map(({ thumb, name, date, url }, i) => {
+                                            mappedProjects.map(({ thumb, name, date, url, urlText, target }, i) => {
                                                 if (i % 2 != 0) return (
                                                     <li className={`${styles.proj} ${shouldAnimate ? styles.animate : ''}`}
                                                      key={name} >
@@ -162,7 +171,7 @@ export default function Habilidades() {
                                                             <div className={styles.proj_img}>
                                                                 <img src={thumb} alt="" />
                                                                 <div className={styles.content_visitar}>
-                                                                    <a href={url} target="_blank">Visitar</a>
+                                                                    <a href={url} target={target}>{urlText}</a>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -175,7 +184,7 @@ export default function Habilidades() {
                                 <ul className={styles.content_mobile}>
 
                                     {
-                                        mappedProjects.map(({ thumb, name, date }, i) => {
+                                        mappedProjects.map(({ thumb, name, date, url, urlText, target }, i) => {
                                             if (i % 2 == 0) return (
                                                 <li className={`${styles.proj_mobile} ${shouldAnimate ? styles.left :"" }`} key={name}>
                                                     <div className={styles.content_mobile_proj}>
@@ -184,8 +193,8 @@ export default function Habilidades() {
                                                         </div>
                                                         <div className={styles.mobile_text}>
                                                             <p className={styles.mobile_title}>{name}</p>
-                                                            <a href="#" className={styles.mobile_visitar}>
-                                                                <p>Visitar</p>
+                                                            <a href={url} className={styles.mobile_visitar} target={target}>
+                                                                <p>{urlText}</p>
                                                             </a>
                                                             <p className={styles.mobile_data}>{date}</p>   
                                                         </div>
@@ -200,8 +209,8 @@ export default function Habilidades() {
                                                         </div>
                                                         <div className={styles.mobile_text}>
                                                             <p className={styles.mobile_title}>{name}</p>
-                                                            <a href="#" className={styles.mobile_visitar}>
-                                                                <p>Visitar</p>
+                                                            <a href={url} className={styles.mobile_visitar} target={target}>
+                                                                <p>{urlText}</p>
                                                             </a>
                                                             <p className={styles.mobile_data}>{date}</p>   
                                                         </div>
