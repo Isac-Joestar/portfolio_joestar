@@ -16,9 +16,9 @@ const ProjetsConfig = [
         thumb: "/images/ToDoListProj.jpg",
         date: `${dataAtual}`,
         tecs: ["REACT", "JS", "HTML", "CSS", "FIGMA"],
-        url: "https://to-do-list-two-kappa.vercel.app/",
+        url: "#habilidades",
         urlText: 'Em desenvolvimento',
-        target: '#habilidades'
+        target: ''
     },
     {
         name: "Pokedex",
