@@ -21,7 +21,7 @@ const ProjetsConfig = [
         target: ''
     },
     {
-        name: "Pokedex",
+        name: "Pokédex",
         thumb: "/images/Pokedex.jpg",
         date: "Em Breve",
         tecs: ["REACT", "JS", "HTML", "CSS"],
