@@ -58,7 +58,7 @@ export default function Email(){
                 {(formState.errors.email && formState.errors.email.message) && <p className={styles.erro}>{formState.errors.email.message}</p>}
                 
                 <label htmlFor="">Mensagem:</label>
-                <textarea {...register("message",MessageValidator)} cols={30} rows={10}></textarea>
+                <textarea {...register("message",MessageValidator)} cols={30} rows={10} className={`${!!formState.errors.message && styles.classequalquer}`}></textarea>
                 {(formState.errors.message && formState.errors.message.message) && <p className={styles.erro}>{formState.errors.message.message}</p>}
                 
                 <div className={styles.content_btn}>
