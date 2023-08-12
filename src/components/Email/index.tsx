@@ -50,24 +50,23 @@ export default function Email(){
                 
                 <label htmlFor="contact_name" >Nome:</label>
                 <input type="text" {...register("name",NameValidator)} className={`${styles.input_nome}${ formState.errors.name?.message != 'undefined' ? styles.erro : styles.ok}`}/>
-                { (formState.errors.name && formState.errors.name.message) && <p>{ formState.errors.name.message }</p> }
+                { (formState.errors.name && formState.errors.name.message) && <p className={styles.erro}>{ formState.errors.name.message }</p> }
                 
                 <label htmlFor="">Email:</label>
                 <input type="email" {...register("email",MailValidator)}/>
-                {(formState.errors.email && formState.errors.email.message) && <p>{formState.errors.email.message}</p>}
+                {(formState.errors.email && formState.errors.email.message) && <p className={styles.erro}>{formState.errors.email.message}</p>}
                 
                 <label htmlFor="">Mensagem:</label>
                 <textarea {...register("message",MessageValidator)} cols={30} rows={10}></textarea>
-                {(formState.errors.message && formState.errors.message.message) && <p>{formState.errors.message.message}</p>}
+                {(formState.errors.message && formState.errors.message.message) && <p className={styles.erro}>{formState.errors.message.message}</p>}
                 
                 <div className={styles.content_btn}>
                     <button>
-                        {isLoading && <p>Carregando...</p> }
-                        Enviar
+                        {isLoading ? <p className={styles.enviando}>Enviando...</p> : <p className={styles.enviar}>Enviar</p> }
                     </button>
                 </div>    
                 {
-                    success && <p>{success }</p>
+                    success && <p>{success}</p>
                 }
             </form>
         </>

@@ -44,15 +44,18 @@
     border-radius: 5px;
     border: 2px solid #000;
     background-color: var(--bg2);
-    font-size: 20px;
+    font-size: 20px ;
+    color: var(--color1) ;
     cursor: pointer;
  
 }
 
 
 
+
+
 /* ERROS */
-.form p{ 
+.erro{ 
     color: crimson;
     font-size: 0.9rem;
 }
