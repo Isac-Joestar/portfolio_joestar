@@ -14,7 +14,7 @@ interface IForm{
 
 export default function Email(){
 
-    const { register, formState, handleSubmit } = useForm<IForm>()
+    const { register, formState, handleSubmit, reset } = useForm<IForm>()
     const [isLoading,setLoading] = useState<boolean>(false)
     const [success,setSuccess] = useState<string | null>(null)
 
@@ -40,6 +40,7 @@ export default function Email(){
         setLoading(false)
         if(data.status){
             setSuccess("Enviado com sucesso")
+            reset()
         }
     }
    
