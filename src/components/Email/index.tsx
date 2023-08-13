@@ -5,7 +5,7 @@ import styles from './index.module.css';
 import { MailValidator, MessageValidator, NameValidator } from '@/utils/validators';
 import { BASE_URL } from '@/utils/constants';
 import { useState, useEffect } from 'react';
-import Swal from 'sweetalert2'
+// import Swal from 'sweetalert2'
 
 interface IForm{
     name: string;
@@ -43,15 +43,17 @@ export default function Email(){
             reset()
         }
     }
-   function AlertSucess(){
-    if(success){
-        Swal.fire({
-            icon:'success',
-            title:'Obrigado pela preferência!',
-            text:' Estou ansioso para trabalharmos juntos!',
-        })   
+
+    const Swal = require('sweetalert2')
+    function AlertSucess(){
+        if(success){
+            Swal.fire({
+                icon:'success',
+                title:'Obrigado pela preferência!',
+                text:' Estou ansioso para trabalharmos juntos!',
+            })   
+        }
     }
-   }
     console.log(formState.errors.name?.message)
     return(
         <>
