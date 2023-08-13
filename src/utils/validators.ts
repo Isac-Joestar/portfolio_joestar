@@ -11,7 +11,7 @@ const MailValidator: RegisterOptions = {
         value: 64
     },
     pattern:{
-        message: "insira um email valido. Exemplo: name@example.com",
+        message: "insira um email valido. Exemplo: name@gmail.com",
         value: /^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/,
     }
 }

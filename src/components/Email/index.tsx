@@ -50,15 +50,15 @@ export default function Email(){
             <form action="" className={styles.form} onSubmit={handleSubmit(handleMailSend)}>
                 
                 <label htmlFor="contact_name" >Nome:</label>
-                <input type="text" {...register("name",NameValidator)} className={`${styles.input_nome}${ formState.errors.name?.message != 'undefined' ? styles.erro : styles.ok}`}/>
+                <input type="text" {...register("name",NameValidator)} className={`${!!formState.errors.name && styles.erroInput}`}/>
                 { (formState.errors.name && formState.errors.name.message) && <p className={styles.erro}>{ formState.errors.name.message }</p> }
                 
                 <label htmlFor="">Email:</label>
-                <input type="email" {...register("email",MailValidator)}/>
+                <input type="email" {...register("email",MailValidator)} className={`${!!formState.errors.email && styles.erroInput}`}/>
                 {(formState.errors.email && formState.errors.email.message) && <p className={styles.erro}>{formState.errors.email.message}</p>}
                 
                 <label htmlFor="">Mensagem:</label>
-                <textarea {...register("message",MessageValidator)} cols={30} rows={10} className={`${!!formState.errors.message && styles.classequalquer}`}></textarea>
+                <textarea {...register("message",MessageValidator)} cols={30} rows={10} className={`${!!formState.errors.message && styles.erroInput}`}></textarea>
                 {(formState.errors.message && formState.errors.message.message) && <p className={styles.erro}>{formState.errors.message.message}</p>}
                 
                 <div className={styles.content_btn}>
