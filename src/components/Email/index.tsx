@@ -26,7 +26,7 @@ export default function Email(){
         }
     }, [success])
     
-
+    const Swal = require('sweetalert2')
     const handleMailSend: SubmitHandler<IForm> = async({ email, message, name }) => {
         setLoading(true)
         const data = await fetch(`${BASE_URL}/api/sendmail`,{
@@ -40,20 +40,18 @@ export default function Email(){
         setLoading(false)
         if(data.status){
             setSuccess("Enviado com sucesso")
-            reset()
-        }
-    }
-
-    const Swal = require('sweetalert2')
-    function AlertSucess(){
-        if(success){
+            
             Swal.fire({
                 icon:'success',
                 title:'Obrigado pela preferência!',
                 text:' Estou ansioso para trabalharmos juntos!',
             })   
+            reset()
         }
     }
+
+  
+   
     console.log(formState.errors.name?.message)
     return(
         <>
