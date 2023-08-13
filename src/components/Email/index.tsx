@@ -40,7 +40,7 @@ export default function Email(){
         setLoading(false)
         if(data.status){
             setSuccess("Enviado com sucesso")
-            
+
             Swal.fire({
                 icon:'success',
                 title:'Obrigado pela preferência!',
@@ -70,7 +70,7 @@ export default function Email(){
                 {(formState.errors.message && formState.errors.message.message) && <p className={styles.erro}>{formState.errors.message.message}</p>}
                 
                 <div className={styles.content_btn}>
-                    <button onClick={AlertSucess}>
+                    <button>
                         {isLoading ? <p className={styles.enviando}>Enviando...</p> : <p className={styles.enviar}>Enviar</p> }
                     </button>
                 </div>   
