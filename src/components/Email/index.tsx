@@ -5,13 +5,13 @@ import styles from './index.module.css';
 import { MailValidator, MessageValidator, NameValidator } from '@/utils/validators';
 import { BASE_URL } from '@/utils/constants';
 import { useState, useEffect } from 'react';
+import Swal from 'sweetalert2'
 
 interface IForm{
     name: string;
     email: string;
     message: string;
 }
-
 export default function Email(){
 
     const { register, formState, handleSubmit, reset } = useForm<IForm>()
@@ -43,7 +43,15 @@ export default function Email(){
             reset()
         }
     }
-   
+   function AlertSucess(){
+    if(success){
+        Swal.fire({
+            icon:'success',
+            title:'Obrigado pela preferência!',
+            text:' Estou ansioso para trabalharmos juntos!',
+        })   
+    }
+   }
     console.log(formState.errors.name?.message)
     return(
         <>
@@ -62,14 +70,12 @@ export default function Email(){
                 {(formState.errors.message && formState.errors.message.message) && <p className={styles.erro}>{formState.errors.message.message}</p>}
                 
                 <div className={styles.content_btn}>
-                    <button>
+                    <button onClick={AlertSucess}>
                         {isLoading ? <p className={styles.enviando}>Enviando...</p> : <p className={styles.enviar}>Enviar</p> }
                     </button>
-                </div>    
-                {
-                    success && <p>{success}</p>
-                }
+                </div>   
             </form>
+       
         </>
     )
 }
