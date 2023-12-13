@@ -10,8 +10,6 @@ import Footer from '../components/Footer/index'
 export default function App() {
 	return (
 		<>
-		 	
-
 			<Header />
 			<Home />
 			<OQueFaco />
