@@ -18,7 +18,7 @@ export default function QuemSou(){
                          minhas habilidades e conhecimentos.</p>
                     <ul className={styles.list}>
                         <li><a href="https://github.com/Isac-Joestar" target='_blank'><FaGithub/></a></li>
-                        <li><a href="https://www.instagram.com/dev.joestar/" target='_blank'><FaInstagramSquare/></a></li>
+                        <li><a href="https://www.instagram.com/joestar.code/" target='_blank'><FaInstagramSquare/></a></li>
                         <li><a href="https://www.linkedin.com/in/isac-joestar-826396258/" target='_blank'><FaLinkedin/></a></li>
                         <li><a href="https://discord.gg/9Y9nbSRqd9" target='_blank'><FaDiscord/></a></li>
                     </ul>
