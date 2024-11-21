@@ -94,7 +94,7 @@
     color: var(--color1);
 }
 .content_text h1{
-    font-size: 5rem;
+    font-size: 4.69rem;
     white-space: nowrap;
 
     animation-name: LoadingH1;

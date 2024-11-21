@@ -1,6 +1,8 @@
 import styles from './index.module.css'
 import BtnVoltar from '../BtnVoltar/index'
 export default function Footer(){
+    const date = new Date();
+
     return(
         <footer className={styles.footer}>
             <div className={styles.content_nav}>
@@ -15,9 +17,9 @@ export default function Footer(){
             </div>
 
             <div className={styles.content_bottom}>
-                <p className={styles.copy}>© Copyright 2023 Isac Joestar. Todos os direitos reservados.</p>
+                <p className={styles.copy}>© Copyright {date.getFullYear()} Isac Joestar. Todos os direitos reservados.</p>
                 <BtnVoltar/>
             </div>
         </footer>
     )
-}
+}    

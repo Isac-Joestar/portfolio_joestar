@@ -4,7 +4,7 @@ export default function Home(){
         <main className={styles.main}>
             <div className={styles.container}>
                 <div className={styles.content_text}>
-                    <h1>Isac Joestar</h1>
+                    <h1>Joestar Code</h1>
                     <h2>front-end</h2>
                     <p> Potencialize sua presença online com um site 
                         personalizado que atrai e cativa seus clientes, 
