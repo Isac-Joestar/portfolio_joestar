@@ -24,11 +24,13 @@
     font-style: normal;
     font-weight: 600;
     line-height: 125%; /* 27.5px */
+    font-family: var(--font1);
 }
 .content_form{
     /* background-color: aqua; */
     width: 400px;
     height: 100%;
+    font-family: var(--font1);
     
 }
 .content_form h3{
